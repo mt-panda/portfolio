@@ -1,0 +1,63 @@
+import React from "react";
+import { Button } from "@/components/ui/button";
+import { Play } from "lucide-react";
+import image from "../assets/aboutbg.PNG"
+
+export default function AboutSection() {
+  return (
+    <section className="about-container"
+    style={{ backgroundImage: `url(${image})` }}>
+      {/* Overlay for better text contrast */}
+      <div className="about-bg-overlay"></div>
+      {/* Inner container for the content */}
+      <div className="about-inner-container">
+        {/* Left Side: Image with Background Shapes */}
+        <div className="about-left-container">
+          {/* Background Shapes */}
+          <div className="image-bg-shapes -left-15 top-75 grid-cols-8">
+            {Array.from({ length: 64 }).map((_, i) => (
+              <div key={i} className="w-1.5 h-1.5 rounded-full bg-[#FFA500]" />
+            ))}
+          </div>
+          <div className="image-bg-shapes -right-5 top-5 grid-cols-7">
+            {Array.from({ length: 49 }).map((_, i) => (
+              <div key={i} className="w-1.5 h-1.5 rounded-full bg-[#FFA500]" />
+            ))}
+          </div>
+
+          {/* Image */}
+          <img
+            src="/images/avatar.png"
+            alt="About Us"
+            className="relative rounded-lg z-10"
+          />
+
+          {/* Play Button */}
+          <button className="about-play-btn">
+            <div className="bg-[#FFA500] rounded-full p-4 transform transition-transform duration-300 hover:scale-110">
+              <Play className="w-8 h-8 text-black" fill="black" />
+            </div>
+          </button>
+        </div>
+
+        {/* Right Side: Text */}
+        <div className="about-right-container">
+          <h2 className="text-3xl md:text-4xl font-extrabold leading-snug">
+            Hi, I am <br />
+            Muhammad Tahir
+            <br /> <span className="text-[#FFA500]">A MERN Developer</span>
+          </h2>
+          <p className="text-gray-300 leading-relaxed">
+            I build full-stack web apps with MongoDB, Express, React, and
+            Node.js, focusing on clean UI, secure backend, and real-time
+            features. I love turning ideas into useful, scalable products.
+          </p>
+
+          <Button className="bg-[#FFA500] hover:bg-[#e69500] text-black font-bold px-6 py-3 rounded-md">
+            DOWNLOAD CV
+          </Button>
+        </div>
+      </div>
+    </section>
+  );
+}
