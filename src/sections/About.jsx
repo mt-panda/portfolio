@@ -37,7 +37,7 @@ export default function AboutSection() {
           />
 
           {/* Play Button */}
-          <button className="about-play-btn" onClick={() => setIsOpen(true)} >
+          <button className="about-play-btn" onClick={() => setIsOpen(true)}>
             <div className="about-play-btn-inner-container">
               <Play className=" w-8 h-8 text-black" fill="black" />
             </div>
@@ -47,7 +47,7 @@ export default function AboutSection() {
 
         {/* Right Side: Text */}
         <div className="about-right-container">
-          <h2 className="text-3xl md:text-4xl font-extrabold leading-snug">
+          <h2 className="about-heading">
             Hi, I'm <br />
             Muhammad Tahir
             <br /> <span className="text-[#FFA500]">A MERN Developer</span>
@@ -58,14 +58,22 @@ export default function AboutSection() {
             features. I love turning ideas into useful, scalable products.
           </p>
 
-          <Button className="bg-[#FFA500] hover:bg-[#e69500] text-black font-bold px-6 py-3 rounded-md">
+          <Button
+            className="bg-[#FFA500] hover:bg-[#e69500] hover:opacity-80 transition-opacity duration-300 text-black font-bold px-6 py-3 rounded-md cursor-pointer"
+            onClick={() => {
+              const link = document.createElement("a");
+              link.href = "/pdfs/Tahir.pdf";
+              link.download = "Tahir.pdf";
+              document.body.appendChild(link);s
+              link.click();
+              document.body.removeChild(link);
+            }}
+          >
             DOWNLOAD CV
           </Button>
         </div>
       </div>
-      { isOpen && (
-        <Modal setIsOpen={setIsOpen}/>
-      )}
+      {isOpen && <Modal setIsOpen={setIsOpen} />}
     </section>
   );
 }
