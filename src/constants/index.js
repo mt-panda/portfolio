@@ -2,16 +2,21 @@
 export const navItems = [
   {
     id: 1,
-    title: "Projects",
-    href: "#project",
-  },
-  {
-    id: 2,
     title: "About",
     href: "#about",
   },
   {
-    id: 0,
+    id: 2,
+    title: "Experience",
+    href: "#experience",
+  },
+  {
+    id: 3,
+    title: "Projects",
+    href: "#project",
+  },
+  {
+    id: 4,
     title: "Contact",
     href: "#contact",
   },
@@ -59,3 +64,24 @@ export const sliderImages = [
     link: "https://mern-memories-frontend.vercel.app",
   },
 ];
+
+export const experiences = [
+    {
+      year: "Jan 2024 - Mar 2024 ( Intern )",
+      company: "React & React Native Developer - Techietribe Ltd.",
+      description:
+        "Worked on real-world React and React Native projects during a 3-month internship.",
+    },
+    {
+      year: "Apr 2024 - May 2025 ( ASE )",
+      company: "Associate Software Engineer - Techietribe Ltd.",
+      description:
+        "Served as Associate Software Engineer, contributing to full-stack projects for 1 year and 1 month.",
+    },
+    {
+      year: "Jun 2025 - Present ( MERN Developer )",
+      company: "Software Engineer - Techietribe Ltd.",
+      description:
+        "Currently working as a MERN Developer, building scalable web applications and leading project modules.",
+    },
+  ];

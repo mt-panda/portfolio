@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Button } from "@/components/ui/button";
+import { Button } from "@/components/ui/Button";
 import { Play } from "lucide-react";
 import image from "../assets/aboutbg.PNG";
 import Modal from "../components/ui/Modal";
@@ -8,6 +8,7 @@ export default function AboutSection() {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <section
+      id="about"
       className="about-container"
       style={{ backgroundImage: `url(${image})` }}
     >
@@ -59,12 +60,13 @@ export default function AboutSection() {
           </p>
 
           <Button
-            className="bg-[#FFA500] hover:bg-[#e69500] hover:opacity-80 transition-opacity duration-300 text-black font-bold px-6 py-3 rounded-md cursor-pointer"
+            className="bg-[#FFA500] hover:bg-[#e69500] hover:opacity-80 transition-opacity duration-300 text-black font-bold px-6 py-3 rounded-md cursor-pointer sansation-bold"
             onClick={() => {
               const link = document.createElement("a");
               link.href = "/pdfs/Tahir.pdf";
               link.download = "Tahir.pdf";
-              document.body.appendChild(link);s
+              document.body.appendChild(link);
+              s;
               link.click();
               document.body.removeChild(link);
             }}

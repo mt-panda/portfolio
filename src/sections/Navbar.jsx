@@ -32,7 +32,7 @@ const Navbar = () => {
         <a href="#hero">Portfolio</a>
       </h3>
 
-      <ul className="flex items-center gap-4">
+      <ul className="flex items-center gap-6">
         {navItems.map(({ id, title, href }) => (
           <li key={id}>
             <a href={href}>{title}</a>
