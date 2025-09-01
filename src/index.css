@@ -1,9 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 @import "tailwindcss";
-
 @import "tw-animate-css";
 
+/* Allow using `dark:` variants */
 @custom-variant dark (&:is(.dark *));
 
 html {
@@ -14,7 +14,9 @@ html {
   --font-poppins: "Poppins", sans-serif;
 }
 
-/* this code is use to remove the default styling that browser apply */
+/* ========================================
+   Reset / Autofill Fix
+======================================== */
 @layer utilities {
   input:-webkit-autofill,
   input:-webkit-autofill:hover,
@@ -29,22 +31,21 @@ html {
   }
 }
 
+/* ========================================
+   Utility Shortcuts
+======================================== */
 @utility flex-center {
   @apply flex items-center justify-center;
 }
-
 @utility col-center {
   @apply flex flex-col items-center justify-center;
 }
-
 @utility abs-center {
   @apply absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2;
 }
-
 @utility bg-gradient {
   background: radial-gradient(circle, #111111, #000000);
 }
-
 @utility text-gradient {
   background: linear-gradient(
     to right,
@@ -57,136 +58,112 @@ html {
   background-clip: text;
   color: transparent;
 }
-
 @utility shadow {
   text-shadow: 10px 20px 20px #111;
 }
-
-@utility bg-gradient {
-  background: radialGradient(
-    at center,
-    oklch(37% 0.013 285.805),
-    oklch(14.1% 0.005 285.823)
-  );
-}
-
 @utility text-stroke {
   -webkit-text-stroke: 2px white;
   color: transparent;
 }
 
-/* ==================================================
-                This is for Navbar
-================================================== */
-
+/* ========================================
+   Navbar
+======================================== */
 @utility navbar {
-  @apply absolute z-[100] left-1/2 -translate-x-1/2 top-10 w-6/12 rounded-full px-10 py-5 text-white bg-white/10 backdrop-blur-2xl flex items-center justify-between;
+  @apply fixed top-10 left-1/2 -translate-x-1/2 z-[100] w-6/12 rounded-full px-10 py-5 
+         bg-white/10 backdrop-blur-2xl flex items-center justify-between text-white;
 }
-
 @utility nav-title {
   @apply text-xl font-semibold cursor-pointer;
 }
-
 @utility selection {
   @apply selection:bg-white selection:text-black;
 }
 
-/* ==================================================
-                This is for Hero Section
-================================================== */
+/* ========================================
+   Hero Section
+======================================== */
 @utility hero-container {
   @apply relative h-full w-full bg-gradient text-white;
 }
-
 @utility hero-filled-title {
   @apply abs-center mt-50 whitespace-nowrap text-[11vw] font-bold shadow selection;
 }
-
 @utility hero-outlined-title {
-  @apply abs-center mt-50 z-50  whitespace-nowrap text-[11vw] font-bold text-stroke selection;
+  @apply abs-center mt-50 z-50 whitespace-nowrap text-[11vw] font-bold text-stroke selection;
 }
-
 @utility hero-white-gradient {
   @apply abs-center rounded-full blur-3xl h-10/12 w-1/2 bg-zinc-300/20;
 }
-
 @utility hero-img {
   @apply absolute lg:-bottom-115 scale-45 z-40 w-full object-cover;
 }
 
-/* ==================================================
-                This is for About Section
-================================================== */
+/* ========================================
+   About Section
+======================================== */
 @utility about-container {
   @apply h-screen flex items-center justify-center bg-gray-900 text-white;
 }
-
 @utility about-bg-overlay {
-  @apply absolute inset-0 bg-black/10
+  @apply absolute inset-0 bg-black/10;
 }
-
 @utility about-download-btn {
   @apply px-8 py-3 bg-white/10 rounded-full backdrop-blur-2xl text-white mt-4;
 }
-
 @utility about-inner-container {
-  @apply relative max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-20 px-6 z-10;
+  @apply relative max-w-6xl mx-auto flex flex-col md:flex-row items-center 
+         justify-between gap-40 z-10;
 }
-
 @utility about-left-container {
   @apply relative w-full md:w-1/2 flex justify-center;
 }
-
 @utility image-bg-shapes {
   @apply absolute grid gap-5 opacity-50;
 }
-
 @utility about-play-btn {
-  @apply absolute inset-0 flex items-center justify-center z-20;
+  @apply absolute top-75 left-92 rounded-full h-16 w-16 flex items-center justify-center 
+         z-20 cursor-pointer bg-white;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+@utility about-play-btn-inner-container {
+  @apply bg-[#FFA500] rounded-full shadow-[0_0_25px_#FFA500] p-4 
+         transform transition-transform duration-300 hover:scale-200;
+}
+@utility about-play-btn-pulse-ring {
+  @apply absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[150px] 
+         aspect-square rounded-full border-2 border-[#FFA500] 
+         shadow-[0_0_20px_#FFA500];
+}
+@utility about-bg-dots {
+  @apply w-1.5 h-1.5 rounded-full bg-[#FFA500];
+}
+@utility about-main-image {
+  @apply relative rounded-lg z-10;
+}
 @utility about-right-container {
   @apply w-full md:w-1/2 space-y-6;
 }
 
-
- 
-
-/* ==================================================
-                This is for Contact us Section
-================================================== */
-
+/* ========================================
+   Contact Section
+======================================== */
 @utility input {
   @apply w-full py-2 text-white outline-none border-b-2 border-white/10;
 }
-
 @utility submit-btn {
   @apply py-2 backdrop-blur-2xl bg-white/10 rounded-full cursor-pointer;
 }
 
+/* ========================================
+   Theme System (Light / Dark)
+======================================== */
 @theme inline {
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
+
+  /* Map CSS vars into Tailwind tokens */
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);
@@ -222,6 +199,7 @@ html {
 
 :root {
   --radius: 0.625rem;
+  /* Light theme defaults */
   --background: oklch(1 0 0);
   --foreground: oklch(0.141 0.005 285.823);
   --card: oklch(1 0 0);
@@ -256,6 +234,7 @@ html {
 }
 
 .dark {
+  /* Dark theme overrides */
   --background: oklch(0.141 0.005 285.823);
   --foreground: oklch(0.985 0 0);
   --card: oklch(0.21 0.006 285.885);
@@ -289,11 +268,33 @@ html {
   --sidebar-ring: oklch(0.552 0.016 285.938);
 }
 
+/* ========================================
+   Base
+======================================== */
 @layer base {
   * {
     @apply border-border outline-ring/50;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-poppins;
+  }
+}
+
+/* ========================================
+   Animations
+======================================== */
+@keyframes pulse-ring {
+  0% {
+    transform: scale(0.4);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0.6);
+    opacity: 0;
+  }
+}
+@layer utilities {
+  .animate-pulse-ring {
+    animation: pulse-ring 2s ease-in-out infinite;
   }
 }

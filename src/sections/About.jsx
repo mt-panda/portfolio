@@ -1,12 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Play } from "lucide-react";
-import image from "../assets/aboutbg.PNG"
+import image from "../assets/aboutbg.PNG";
+import Modal from "../components/ui/Modal";
 
 export default function AboutSection() {
+  const [isOpen, setIsOpen] = useState(false);
   return (
-    <section className="about-container"
-    style={{ backgroundImage: `url(${image})` }}>
+    <section
+      className="about-container"
+      style={{ backgroundImage: `url(${image})` }}
+    >
       {/* Overlay for better text contrast */}
       <div className="about-bg-overlay"></div>
       {/* Inner container for the content */}
@@ -16,12 +20,12 @@ export default function AboutSection() {
           {/* Background Shapes */}
           <div className="image-bg-shapes -left-15 top-75 grid-cols-8">
             {Array.from({ length: 64 }).map((_, i) => (
-              <div key={i} className="w-1.5 h-1.5 rounded-full bg-[#FFA500]" />
+              <div key={i} className="about-bg-dots" />
             ))}
           </div>
           <div className="image-bg-shapes -right-5 top-5 grid-cols-7">
             {Array.from({ length: 49 }).map((_, i) => (
-              <div key={i} className="w-1.5 h-1.5 rounded-full bg-[#FFA500]" />
+              <div key={i} className="about-bg-dots" />
             ))}
           </div>
 
@@ -29,21 +33,22 @@ export default function AboutSection() {
           <img
             src="/images/avatar.png"
             alt="About Us"
-            className="relative rounded-lg z-10"
+            className="about-main-image"
           />
 
           {/* Play Button */}
-          <button className="about-play-btn">
-            <div className="bg-[#FFA500] rounded-full p-4 transform transition-transform duration-300 hover:scale-110">
-              <Play className="w-8 h-8 text-black" fill="black" />
+          <button className="about-play-btn" onClick={() => setIsOpen(true)} >
+            <div className="about-play-btn-inner-container">
+              <Play className=" w-8 h-8 text-black" fill="black" />
             </div>
+            <span className="about-play-btn-pulse-ring animate-pulse-ring" />
           </button>
         </div>
 
         {/* Right Side: Text */}
         <div className="about-right-container">
           <h2 className="text-3xl md:text-4xl font-extrabold leading-snug">
-            Hi, I am <br />
+            Hi, I'm <br />
             Muhammad Tahir
             <br /> <span className="text-[#FFA500]">A MERN Developer</span>
           </h2>
@@ -58,6 +63,9 @@ export default function AboutSection() {
           </Button>
         </div>
       </div>
+      { isOpen && (
+        <Modal setIsOpen={setIsOpen}/>
+      )}
     </section>
   );
 }

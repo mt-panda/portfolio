@@ -87,28 +87,28 @@ const Contact = () => {
           <input
             type="text"
             name="First name"
-            required="true"
+            required={true}
             placeholder="First name"
             className="input"
           />
           <input
             type="text"
             name="Last name"
-            required="true"
+            required={true}
             placeholder="Last name"
             className="input"
           />
           <input
             type="email"
             name="email"
-            required="true"
+            required={true}
             placeholder="E-mail"
             className="input"
           />
           <textarea
             cols={23}
             name="message"
-            required="true"
+            required={true}
             placeholder="Type your message here..."
             className="input"
           ></textarea>
