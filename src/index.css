@@ -144,6 +144,13 @@ html {
   @apply w-full md:w-1/2 space-y-6;
 }
 
+@utility about-heading {
+  @apply text-3xl md:text-4xl font-extrabold leading-snug;
+}
+
+
+
+
 /* ========================================
    Contact Section
 ======================================== */
