@@ -50,7 +50,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <section className="h-screen w-full">
+    <section id="hero" className="h-screen w-full">
       {/* Navbar */}
       <Navbar />
 
