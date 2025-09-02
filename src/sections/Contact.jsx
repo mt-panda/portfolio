@@ -135,6 +135,8 @@ import {
 import { Button } from "../components/ui/Button";
 import { Mail, MapPin, Phone, Linkedin, Github, Twitter } from "lucide-react";
 import ProfileCard from "../components/ui/ProfileCard/ProfileCard";
+import ContactCard from "../components/ui/ProfileCard/ContactCard";
+
 
 export default function ContactSection() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -163,69 +165,24 @@ export default function ContactSection() {
         <div className="flex flex-col md:flex-row gap-20 items-center justify-center w-full">
           {/* Left Column in Single Card */}
           <div className="flex-1 max-w-md h-full">
-            <Card className="relative text-white bg-zinc-900 border-none px-4 py-6 h-full flex flex-col justify-between shadow-[0_4px_20px_#FFA500]">
-              {" "}
-              <div className="space-y-10 my-8 mx-6">
-                <CardHeader>
-                  <CardTitle className="text-center text-2xl text-[#FFA500]">
-                    Contact Information
-                  </CardTitle>
-                </CardHeader>
-
-                <CardContent className="flex items-start gap-6 justify-start">
-                  <IconCircle>
-                    <MapPin size={24} />
-                  </IconCircle>
-                  <div>
-                    <p className="font-semibold">Based In:</p>
-                    <span>Lahore, Punjab, Pakistan</span>
-                  </div>
-                </CardContent>
-
-                <CardContent className="flex items-start gap-6 justify-start">
-                  <IconCircle>
-                    <Mail size={24} />
-                  </IconCircle>
-                  <div>
-                    <p className="font-semibold">Email:</p>
-                    <span>mtahirthedev@gmail.com</span>
-                  </div>
-                </CardContent>
-
-                <CardContent className="flex items-start gap-6 justify-start">
-                  <IconCircle>
-                    <Phone size={24} />
-                  </IconCircle>
-                  <div>
-                    <p className="font-semibold">Phone:</p>
-                    <span>+92 333 4586280</span>
-                  </div>
-                </CardContent>
-              </div>
-              {/* Social Icons in Pill Bar at Bottom */}
-              <CardContent className="flex justify-center pb-4">
-                <div className="flex gap-10 bg-[#FFA500] rounded-full px-15 py-4">
-                  <a
-                    href="#"
-                    className="text-white font-extrabold hover:text-[black] transition-all"
-                  >
-                    <Linkedin size={24} />
-                  </a>
-                  <a
-                    href="#"
-                    className="text-white font-extrabold hover:text-[black] transition-all"
-                  >
-                    <Github size={24} />
-                  </a>
-                  <a
-                    href="#"
-                    className="text-white font-extrabold hover:text-[black] transition-all"
-                  >
-                    <Twitter size={24} />
-                  </a>
-                </div>
-              </CardContent>
-            </Card>
+            
+            <ContactCard
+                    name=""
+                    title="Software Engineer"
+                    handle="mtahirthedev"
+                    status="Online"
+                    contactText="Contact Me"
+                    avatarUrl="/images/profile.webp"
+                    showUserInfo={true}
+                    enableTilt={true}
+                    enableMobileTilt={true}
+                    onContactClick={() => setIsModalOpen(true)}
+                  />
+            
+            
+            
+            
+            
           </div>
 
           {/* Right Column */}
@@ -303,3 +260,74 @@ export default function ContactSection() {
       </section>
   );
 }
+
+
+
+
+
+
+
+
+{/* <Card className="relative text-white bg-zinc-900 border-none px-4 py-6 h-full flex flex-col justify-between shadow-[0_4px_20px_#FFA500]">
+              {" "}
+              <div className="space-y-10 my-8 mx-6">
+                <CardHeader>
+                  <CardTitle className="text-center text-2xl text-[#FFA500]">
+                    Contact Information
+                  </CardTitle>
+                </CardHeader>
+
+                <CardContent className="flex items-start gap-6 justify-start">
+                  <IconCircle>
+                    <MapPin size={24} />
+                  </IconCircle>
+                  <div>
+                    <p className="font-semibold">Based In:</p>
+                    <span>Lahore, Punjab, Pakistan</span>
+                  </div>
+                </CardContent>
+
+                <CardContent className="flex items-start gap-6 justify-start">
+                  <IconCircle>
+                    <Mail size={24} />
+                  </IconCircle>
+                  <div>
+                    <p className="font-semibold">Email:</p>
+                    <span>mtahirthedev@gmail.com</span>
+                  </div>
+                </CardContent>
+
+                <CardContent className="flex items-start gap-6 justify-start">
+                  <IconCircle>
+                    <Phone size={24} />
+                  </IconCircle>
+                  <div>
+                    <p className="font-semibold">Phone:</p>
+                    <span>+92 333 4586280</span>
+                  </div>
+                </CardContent>
+              </div> */}
+              {/* Social Icons in Pill Bar at Bottom */}
+            //   <CardContent className="flex justify-center pb-4">
+            //     <div className="flex gap-10 bg-[#FFA500] rounded-full px-15 py-4">
+            //       <a
+            //         href="#"
+            //         className="text-white font-extrabold hover:text-[black] transition-all"
+            //       >
+            //         <Linkedin size={24} />
+            //       </a>
+            //       <a
+            //         href="#"
+            //         className="text-white font-extrabold hover:text-[black] transition-all"
+            //       >
+            //         <Github size={24} />
+            //       </a>
+            //       <a
+            //         href="#"
+            //         className="text-white font-extrabold hover:text-[black] transition-all"
+            //       >
+            //         <Twitter size={24} />
+            //       </a>
+            //     </div>
+            //   </CardContent>
+            // </Card>
