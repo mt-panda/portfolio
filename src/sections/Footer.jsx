@@ -3,7 +3,7 @@ import { FaGithub } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <footer className="bg-gradient text-white px-16 py-10 selection">
+    <footer className="bg-gradient text-white px-16 py-2 selection">
       <div className="flex-center justify-between">
         {/* left side of the footer */}
         <div className="flex-center gap-2">
@@ -18,13 +18,9 @@ const Footer = () => {
         </div>
 
         {/* right side of the footer */}
-        <div className="flex-center gap-2">
-          <a href="https://www.linkedin.com/in/mtahirthedev" target="_blank">
-            <TiSocialLinkedin size={28} />
-          </a>
-          <a href="https://github.com/tahirrafiqg" target="_blank">
-            <FaGithub size={22} />
-          </a>
+        <div className="flex gap-2 items-center">
+          <p>Made with</p>
+          <img src="/images/love.png" alt="" className="h-4" />
         </div>
       </div>
     </footer>
