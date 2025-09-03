@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Button } from "@/components/ui/Button";
+import { Button } from "@/components/ui/button.jsx";
 import { Play } from "lucide-react";
 import image from "../assets/aboutbg.PNG";
 import Modal from "../components/ui/Modal";
@@ -66,7 +66,6 @@ export default function AboutSection() {
               link.href = "/pdfs/Tahir.pdf";
               link.download = "Tahir.pdf";
               document.body.appendChild(link);
-              s;
               link.click();
               document.body.removeChild(link);
             }}

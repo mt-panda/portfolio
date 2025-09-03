@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/Card";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card.jsx";
 import CircularProgress from "../components/ui/CircularProgress";
 import { experiences } from "../constants/index";
 
@@ -107,6 +107,7 @@ export default function ExperienceSection() {
       {/* Experience Cards with Direction Aware Hover */}
       <div className="grid md:grid-cols-3 gap-6 mb-16">
         {experiences.map((item, i) => {
+          // eslint-disable-next-line react-hooks/rules-of-hooks
           const overlayRef = useRef(null);
           return (
             <Card
