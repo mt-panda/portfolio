@@ -116,13 +116,13 @@ export default function ContactSection() {
         </p>
       </div>
 
-      {/* <ElectricBorder
+      <ElectricBorder
         color="#FFA500"
         speed={1}
         chaos={0.5}
         thickness={2}
         style={{ borderRadius: 16 }}
-      > */}
+      >
         <div className="flex flex-col md:flex-row bg-transparent w-6xl rounded-2xl overflow-hidden divide-y md:divide-y-0 md:divide-x divide-[#FFA500]/20">
           {/* Left Column - Contact Info */}
           <div className="flex-2 max-w-md">
@@ -258,7 +258,7 @@ export default function ContactSection() {
             </Card>
           </div>
         </div>
-      {/* </ElectricBorder> */}
+      </ElectricBorder>
     </section>
   );
 }
