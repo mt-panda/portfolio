@@ -117,10 +117,8 @@ export default function ContactSection() {
       </div>
 
       <ElectricBorder
-        color="#FFA500"
-        speed={1}
-        chaos={0.5}
-        thickness={2}
+        color="#ffa6007c"
+        thickness={0.2}
         style={{ borderRadius: 16 }}
       >
         <div className="flex flex-col md:flex-row bg-transparent w-6xl rounded-2xl overflow-hidden divide-y md:divide-y-0 md:divide-x divide-[#FFA500]/20">
