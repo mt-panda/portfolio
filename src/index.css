@@ -148,7 +148,7 @@ html {
   @apply abs-center rounded-full blur-3xl h-10/12 w-1/2 bg-zinc-300/20;
 }
 @utility hero-img {
-  @apply absolute lg:-bottom-115 scale-45 z-40 w-full object-cover;
+  @apply absolute bottom-0 left-1/2 -translate-x-1/2 h-[93vh] w-auto object-cover z-40;
 }
 
 /* ========================================
