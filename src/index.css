@@ -71,9 +71,6 @@ html {
   font-style: italic;
 }
 
-
-
-
 /* ========================================
    Utility Shortcuts
 ======================================== */
@@ -113,11 +110,23 @@ html {
    Navbar
 ======================================== */
 @utility navbar {
-  @apply fixed top-8 left-1/2 -translate-x-1/2 z-[100] w-6/12 rounded-full px-10 py-5 
+  @apply w-[90%] sm:w-10/12 lg:w-6/12 fixed top-8 left-1/2 -translate-x-1/2 z-[100] w-6/12 rounded-full px-10 py-5 
          bg-white/10 backdrop-blur-2xl flex items-center justify-between text-white;
+}
+@utility desktop-navbar {
+  @apply hidden md:flex items-center gap-6;
 }
 @utility nav-title {
   @apply text-xl font-semibold cursor-pointer;
+}
+@utility hamburger-tile {
+  @apply w-6 h-0.5 bg-white;
+}
+@utility hamburger {
+  @apply md:hidden flex flex-col gap-1.5;
+}
+@utility mobile-navbar {
+  @apply absolute top-20 right-4 bg-white/10 backdrop-blur-2xl rounded-lg p-6 md:hidden flex flex-col gap-4 transition-all duration-1000;
 }
 @utility selection {
   @apply selection:bg-white selection:text-black;
@@ -190,9 +199,6 @@ html {
 @utility about-heading {
   @apply text-3xl md:text-4xl font-extrabold leading-snug;
 }
-
-
-
 
 /* ========================================
    Contact Section

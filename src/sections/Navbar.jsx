@@ -1,14 +1,14 @@
+import { useState } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
-
 import { navItems } from "../constants/index";
 
 const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
   useGSAP(() => {
-    // create gsap timeline
     const tl = gsap.timeline({ delay: 1, ease: "power1.inOut" });
 
-    // gsap animations
     tl.from(".navbar", {
       opacity: 0,
       scale: 0,
@@ -28,17 +28,45 @@ const Navbar = () => {
 
   return (
     <nav className="navbar">
+      {/* Brand */}
       <h3 className="nav-title">
         <a href="#hero">Portfolio</a>
       </h3>
 
-      <ul className="flex items-center gap-6">
+      {/* Desktop Menu */}
+      <ul className="desktop-navbar">
         {navItems.map(({ id, title, href }) => (
           <li key={id}>
             <a href={href}>{title}</a>
           </li>
         ))}
       </ul>
+
+      {/* Mobile Hamburger */}
+      <button
+        className="hamburger"
+        onClick={() => setIsOpen(!isOpen)}
+      >
+        {new Array(3).fill(0).map((_, index) => (
+          <span className="hamburger-tile" key={index}></span>
+        ))}
+      </button>
+
+      {/* Mobile Menu Drawer */}
+      {isOpen && (
+        <div className="mobile-navbar">
+          {navItems.map(({ id, title, href }) => (
+            <a
+              key={id}
+              href={href}
+              onClick={() => setIsOpen(false)}
+              className="text-white"
+            >
+              {title}
+            </a>
+          ))}
+        </div>
+      )}
     </nav>
   );
 };
