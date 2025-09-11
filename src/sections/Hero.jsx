@@ -14,7 +14,6 @@ const Hero = () => {
 
     // animate the hero image
     tl.from(".hero-img", {
-      // yPercent: 100,
       opacity: 0,
       duration: 1,
     })
@@ -67,7 +66,7 @@ const Hero = () => {
           <h1 className="hero-outlined-title">MERN Developer</h1>
         </div>
 
-        <span className="hero-white-gradient"></span>
+        <span className="hero-white-gradient"/>
 
         {/* hero image */}
         <img src="/images/profile.webp" alt="hero-img" className="hero-img" />

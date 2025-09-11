@@ -155,7 +155,7 @@ html {
    About Section
 ======================================== */
 @utility about-container {
-  @apply h-screen flex items-center justify-center bg-gray-900 text-white;
+  @apply h-screen flex items-center justify-center bg-gray-900 text-white bg-cover bg-center;
 }
 @utility about-bg-overlay {
   @apply absolute inset-0 bg-black/10;
@@ -165,7 +165,7 @@ html {
 }
 @utility about-inner-container {
   @apply relative max-w-6xl mx-auto flex flex-col md:flex-row items-center 
-         justify-between gap-40 z-10;
+         justify-between gap-40 z-10 ;
 }
 @utility about-left-container {
   @apply relative w-full md:w-1/2 flex justify-center;
