@@ -43,10 +43,7 @@ const Navbar = () => {
       </ul>
 
       {/* Mobile Hamburger */}
-      <button
-        className="hamburger"
-        onClick={() => setIsOpen(!isOpen)}
-      >
+      <button className="hamburger" onClick={() => setIsOpen(!isOpen)}>
         {new Array(3).fill(0).map((_, index) => (
           <span className="hamburger-tile" key={index}></span>
         ))}
