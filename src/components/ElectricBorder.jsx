@@ -134,6 +134,7 @@ const ElectricBorder = ({ children, color = '#5227FF', speed = 1, chaos = 1, thi
     <div
       ref={rootRef}
       className={'relative isolate ' + (className ?? '')}
+      style={style}>     
       style={style}>
       {/* <svg
         ref={svgRef}
@@ -219,7 +220,7 @@ const ElectricBorder = ({ children, color = '#5227FF', speed = 1, chaos = 1, thi
               yChannelSelector="B" />
           </filter>
         </defs>
-      {/* </svg> */}
+      </svg>
       <div className="absolute inset-0 pointer-events-none" style={inheritRadius}>
         <div
           ref={strokeRef}
