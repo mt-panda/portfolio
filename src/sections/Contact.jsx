@@ -12,6 +12,7 @@ import {
 import { Mail, MapPin, Phone, Linkedin, Github, Twitter } from "lucide-react";
 import ElectricBorder from "@/components/ElectricBorder";
 import image from "/images/profile.webp";
+import { SparklesCore } from "@/components/ui/sparkles";
 
 gsap.registerPlugin(ScrollTrigger, SplitText);
 
@@ -116,149 +117,152 @@ export default function ContactSection() {
         </p>
       </div>
 
-      <ElectricBorder
-        color="#FFA500"
-        speed={1}
-        chaos={0.5}
-        thickness={2}
-        style={{ borderRadius: 16 }}
-      >
-        <div className="flex flex-col md:flex-row bg-transparent w-6xl rounded-2xl overflow-hidden divide-y md:divide-y-0 md:divide-x divide-[#FFA500]/20">
-          {/* Left Column - Contact Info */}
-          <div className="flex-2 max-w-md">
-            <Card
-              id="left-card"
-              className="relative text-white bg-transparent border-none px-8 py-6 h-full flex flex-col justify-evenly overflow-hidden"
-            >
-              {/* Background Image with low opacity */}
-              <img
-                src={image}
-                alt="Profile Background"
-                className="absolute inset-0 w-full h-full object-cover opacity-5"
-              />
+      {/* Main Contact Card Container (Added relative class) */}
+      <div className="flex flex-col md:flex-row relative bg-gradient-radial from-black via-white border-[#FFA500] border-[0.1px] to-[#FFA500] w-6xl rounded-2xl overflow-hidden divide-y md:divide-y-0 md:divide-x divide-[#FFA500]/20">
+        <SparklesCore
+          id="tsparticlesfullpage"
+          background="transparent"
+          minSize={0.6}
+          maxSize={1.4}
+          particleDensity={25}
+          className="absolute inset-0 w-full h-full z-0"
+          particleColor="#FFFFFF"
+        />
 
-              {/* Content above the background */}
-              <div className="relative z-10 space-y-15 my-8 mx-6">
-                <CardHeader className="card-item">
-                  <CardTitle className="text-center text-2xl text-[#FFA500] sansation-bold">
-                    Contact Information
-                  </CardTitle>
-                </CardHeader>
+        {/* Left Column - Contact Info (Content is z-10 or above to show over sparkles) */}
+        <div className="flex-2 max-w-md relative z-10">
+          <Card
+            id="left-card"
+            className="relative text-white bg-transparent border-none px-8 py-6 h-full flex flex-col justify-evenly overflow-hidden"
+          >
+            {/* Background Image with low opacity */}
+            <img
+              src={image}
+              alt="Profile Background"
+              className="absolute inset-0 w-full h-full object-cover opacity-5"
+            />
 
-                <CardContent className="flex items-start gap-6 justify-start card-item">
-                  <IconCircle>
-                    <MapPin size={24} />
-                  </IconCircle>
-                  <div>
-                    <p className="sansation-bold">Based In:</p>
-                    <span className="sansation-regular">
-                      Lahore, Punjab, Pakistan
-                    </span>
-                  </div>
-                </CardContent>
-
-                <CardContent className="flex items-start gap-6 justify-start card-item">
-                  <IconCircle>
-                    <Mail size={24} />
-                  </IconCircle>
-                  <div>
-                    <p className="sansation-bold">Email:</p>
-                    <span className="sansation-regular">
-                      mtahirthedev@gmail.com
-                    </span>
-                  </div>
-                </CardContent>
-
-                <CardContent className="flex items-start gap-6 justify-start card-item">
-                  <IconCircle>
-                    <Phone size={24} />
-                  </IconCircle>
-                  <div>
-                    <p className="sansation-bold">Phone:</p>
-                    <span className="sansation-regular">+92 333 4586280</span>
-                  </div>
-                </CardContent>
-              </div>
-
-              {/* Social Icons */}
-              <CardContent className="relative z-10 flex justify-center pb-4 card-item">
-                <div className="flex gap-10 bg-[#FFA500] rounded-full px-10 py-4 hover:scale-110 transition-all">
-                  <a
-                    href="#"
-                    className="text-white sansation-bold hover:text-black transition-all"
-                  >
-                    <Linkedin size={24} />
-                  </a>
-                  <a
-                    href="#"
-                    className="text-white sansation-bold hover:text-black transition-all"
-                  >
-                    <Github size={24} />
-                  </a>
-                  <a
-                    href="#"
-                    className="text-white sansation-bold hover:text-black transition-all"
-                  >
-                    <Twitter size={24} />
-                  </a>
-                </div>
-              </CardContent>
-            </Card>
-          </div>
-
-          {/* Right Column - Form */}
-          <div className="flex-1 flex h-full">
-            <Card className="flex flex-col justify-center h-full bg-transparent border-none w-full p-10">
-              <CardHeader>
+            {/* Content above the background */}
+            <div className="relative z-10 space-y-15 my-8 mx-6">
+              <CardHeader className="card-item">
                 <CardTitle className="text-center text-2xl text-[#FFA500] sansation-bold">
-                  Send me an Email
+                  Contact Information
                 </CardTitle>
               </CardHeader>
-              <CardContent className="flex-1 flex items-center justify-center">
-                <form
-                  id="contact-form"
-                  onSubmit={handleSubmit}
-                  className="flex flex-col gap-6 w-full max-w-lg"
-                >
-                  <input
-                    type="text"
-                    name="First name"
-                    required
-                    placeholder="First name"
-                    className="w-full px-4 py-3 rounded-md text-white border border-zinc-700 focus:outline-none focus:ring-2 focus:ring-[#FFA500] placeholder-zinc-500 sansation-regular"
-                  />
-                  <input
-                    type="text"
-                    name="Last name"
-                    required
-                    placeholder="Last name"
-                    className="w-full px-4 py-3 rounded-md text-white border border-zinc-700 focus:outline-none focus:ring-2 focus:ring-[#FFA500] placeholder-zinc-500 sansation-regular"
-                  />
-                  <input
-                    type="email"
-                    name="email"
-                    required
-                    placeholder="E-mail"
-                    className="w-full px-4 py-3 rounded-md text-white border border-zinc-700 focus:outline-none focus:ring-2 focus:ring-[#FFA500] placeholder-zinc-500 sansation-regular"
-                  />
-                  <textarea
-                    cols={23}
-                    name="message"
-                    required
-                    placeholder="Type your message here..."
-                    className="w-full px-4 py-3 min-h-[150px] rounded-md text-white border border-zinc-700 focus:outline-none focus:ring-2 focus:ring-[#FFA500] placeholder-zinc-500 sansation-regular"
-                  ></textarea>
-                  <input
-                    type="submit"
-                    value="Submit"
-                    className="w-auto px-6 py-3 rounded-full bg-[#FFA500] text-white sansation-bold hover:bg-[#e69500] transition-colors cursor-pointer"
-                  />
-                </form>
+
+              <CardContent className="flex items-start gap-6 justify-start card-item">
+                <IconCircle>
+                  <MapPin size={24} />
+                </IconCircle>
+                <div>
+                  <p className="sansation-bold">Based In:</p>
+                  <span className="sansation-regular">
+                    Lahore, Punjab, Pakistan
+                  </span>
+                </div>
               </CardContent>
-            </Card>
-          </div>
+
+              <CardContent className="flex items-start gap-6 justify-start card-item">
+                <IconCircle>
+                  <Mail size={24} />
+                </IconCircle>
+                <div>
+                  <p className="sansation-bold">Email:</p>
+                  <span className="sansation-regular">
+                    mtahirthedev@gmail.com
+                  </span>
+                </div>
+              </CardContent>
+
+              <CardContent className="flex items-start gap-6 justify-start card-item">
+                <IconCircle>
+                  <Phone size={24} />
+                </IconCircle>
+                <div>
+                  <p className="sansation-bold">Phone:</p>
+                  <span className="sansation-regular">+92 333 4586280</span>
+                </div>
+              </CardContent>
+            </div>
+
+            {/* Social Icons */}
+            <CardContent className="relative z-10 flex justify-center pb-4 card-item">
+              <div className="flex gap-10 bg-[#FFA500] rounded-full px-10 py-4 hover:scale-110 transition-all">
+                <a
+                  href="#"
+                  className="text-white sansation-bold hover:text-black transition-all"
+                >
+                  <Linkedin size={24} />
+                </a>
+                <a
+                  href="#"
+                  className="text-white sansation-bold hover:text-black transition-all"
+                >
+                  <Github size={24} />
+                </a>
+                <a
+                  href="#"
+                  className="text-white sansation-bold hover:text-black transition-all"
+                >
+                  <Twitter size={24} />
+                </a>
+              </div>
+            </CardContent>
+          </Card>
         </div>
-      </ElectricBorder>
+
+        {/* Right Column - Form (Content is z-10 or above to show over sparkles) */}
+        <div className="flex-1 flex h-full relative z-10">
+          <Card className="flex flex-col justify-center h-full bg-transparent border-none w-full p-10">
+            <CardHeader>
+              <CardTitle className="text-center text-2xl text-[#FFA500] sansation-bold">
+                Send me an Email
+              </CardTitle>
+            </CardHeader>
+            <CardContent className="flex-1 flex items-center justify-center">
+              <form
+                id="contact-form"
+                onSubmit={handleSubmit}
+                className="flex flex-col gap-6 w-full max-w-lg"
+              >
+                <input
+                  type="text"
+                  name="First name"
+                  required
+                  placeholder="First name"
+                  className="w-full px-4 py-3 rounded-md text-white border border-zinc-700 focus:outline-none focus:ring-2 focus:ring-[#FFA500] placeholder-zinc-500 sansation-regular"
+                />
+                <input
+                  type="text"
+                  name="Last name"
+                  required
+                  placeholder="Last name"
+                  className="w-full px-4 py-3 rounded-md text-white border border-zinc-700 focus:outline-none focus:ring-2 focus:ring-[#FFA500] placeholder-zinc-500 sansation-regular"
+                />
+                <input
+                  type="email"
+                  name="email"
+                  required
+                  placeholder="E-mail"
+                  className="w-full px-4 py-3 rounded-md text-white border border-zinc-700 focus:outline-none focus:ring-2 focus:ring-[#FFA500] placeholder-zinc-500 sansation-regular"
+                />
+                <textarea
+                  cols={23}
+                  name="message"
+                  required
+                  placeholder="Type your message here..."
+                  className="w-full px-4 py-3 min-h-[150px] rounded-md text-white border border-zinc-700 focus:outline-none focus:ring-2 focus:ring-[#FFA500] placeholder-zinc-500 sansation-regular"
+                ></textarea>
+                <input
+                  type="submit"
+                  value="Submit"
+                  className="w-auto px-6 py-3 rounded-full bg-[#FFA500] text-white sansation-bold hover:bg-[#e69500] transition-colors cursor-pointer"
+                />
+              </form>
+            </CardContent>
+          </Card>
+        </div>
+      </div>
     </section>
   );
 }

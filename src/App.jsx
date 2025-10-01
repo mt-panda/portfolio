@@ -8,6 +8,7 @@ import Services from "./sections/Experience";
 import Projects from "./sections/Projects";
 import Contact from "./sections/Contact";
 import Footer from "./sections/Footer";
+import { Cursor, CursorProvider } from "./components/animate-ui/components/animate/cursor";
 
 gsap.registerPlugin(ScrollTrigger, SplitText);
 
@@ -16,15 +17,17 @@ const App = () => {
 
   return (
     <main className="font-poppins">
-      <ReactLenis root />
-      <Hero />
-      <About />
-      <Technolgoies />
-      <Services />
-      <Projects />
-      <Contact />
-      <Footer />
-      {/* <div className={"min-h-dvh bg-gradient"}></div> */}
+      <CursorProvider global={true}>
+        <Cursor />
+        <ReactLenis root />
+        <Hero />
+        <About />
+        <Technolgoies />
+        <Services />
+        <Projects />
+        <Contact />
+        <Footer />
+      </CursorProvider>
     </main>
   );
 };
