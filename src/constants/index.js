@@ -84,4 +84,67 @@ export const experiences = [
       description:
         "Currently working as a MERN Developer, building scalable web applications and leading project modules.",
     },
-  ];
+];
+  
+export const projects = [
+  {
+    title: "Contuit AI Automation Platform - Web App",
+    subtitle:
+      "An AI-powered automation platform streamlining workflows for enterprises.",
+    stack:
+      "React, Redux-Saga, Redux-Form | Node.js, MongoDB | Swagger, REST API | GitLab CI/CD | Jira Ticketing, Daily Standups, Grooming Sessions | Agile",
+    image: "/images/contuit.png",
+    tint: "rgba(0,0,0,0.3)",
+    path: "https://contuit.com/",
+  },
+  {
+    title: "ALbertsons Associate App - React Native",
+    subtitle:
+      "A mobile solution enabling Albertsons employees to manage tasks, schedules, and communication on the go.",
+    stack:
+      "React Native | Redux Toolkit | Axios | Custom Hooks (for theming and API) | Custom Internal UI Library | Lazy loading, optimized rendering | ADA-compliant UI development | Unit Testing (Jest) | Jira | Agile (Sprint Planning, Grooming Sessions)",
+    image: "/images/albertsons.avif",
+    tint: "rgba(0,0,0,0.3)",
+    path: "https://www.albertsons.com/about-us/mobile-apps.html",
+  },
+  {
+    title: "Satisfilab AI Conversational Agentic Platform - Web App",
+    subtitle:
+      "A conversational AI platform built to deliver advanced agentic interactions and intelligent customer engagement.",
+    stack:
+      "React, Redux, UI Libraries | Node.js, Express, PostgreSQL, REST APIs | GitHub, Jira, Slack | Agile, Meetings",
+    image: "/images/satisfilabs.webp",
+    tint: "rgba(0,0,0,0.3)",
+    path: "https://www.satisfilabs.com/",
+  },
+  {
+    title: "Great Western Transport Company - Web App",
+    subtitle:
+      "A digital platform for managing logistics, fleet operations, and client bookings efficiently.",
+    stack:
+      "React, Custom UI Library, Context API, Axios | REST API | Bitbucket | Jira, Daily Stand-ups, Weekly 1-on-1s, Sprint Planning, Grooming Meetings",
+    image: "/images/gwtc.jpg",
+    tint: "rgba(0,0,0,0.3)",
+    path: "https://www.gwtrans.com/",
+  },
+  {
+    title: "B2B Marketplace - Web / React Native",
+    subtitle:
+      "A scalable marketplace solution connecting businesses with real-time listings, transactions, and mobile support.",
+    stack:
+      "React, React Native | Redux Toolkit | Tailwind CSS, Native Wind | Firebase Auth | React Router",
+    image: "/images/zorb.png",
+    tint: "rgba(0,0,0,0.3)",
+    path: "https://zord.vercel.app/",
+  },
+  {
+    title: "B-Corporation - Assessment Web Portal",
+    subtitle:
+      "An interactive assessment portal designed to streamline B-Corp certification processes for organizations.",
+    stack:
+      "React, Redux, zustand | Golang, PostgreSQL, REST APIs | GitHub, Jira, Slack | Agile, Standups",
+    image: "/images/bcorp.webp",
+    tint: "rgba(0,0,0,0.3)",
+    path: "https://www.bcorporation.net/en-us/",
+  },
+];
