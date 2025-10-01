@@ -138,7 +138,7 @@ export default function ContactSection() {
             <img
               src={image}
               alt="Profile Background"
-              className="absolute inset-0 w-full h-full object-cover opacity-5"
+              className="absolute inset-0 w-full h-full object-cover opacity-20"
             />
 
             {/* Content above the background */}

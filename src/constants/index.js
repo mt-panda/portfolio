@@ -49,7 +49,7 @@ export const logos = [
 // project section slider images
 export const sliderImages = [
   {
-    src: "/images/slider-1.png",
+    src: "/images/contuit.png",
     alt: "Image 1",
     link: "https://e-commerce-frontend-eight-alpha.vercel.app",
   },
