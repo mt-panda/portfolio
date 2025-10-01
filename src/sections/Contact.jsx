@@ -188,13 +188,13 @@ export default function ContactSection() {
             <CardContent className="relative z-10 flex justify-center pb-4 card-item">
               <div className="flex gap-10 bg-[#FFA500] rounded-full px-10 py-4 hover:scale-110 transition-all">
                 <a
-                  href="#"
+                  href="https://www.linkedin.com/in/m-tahir-309513342?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
                   className="text-white sansation-bold hover:text-black transition-all"
                 >
                   <Linkedin size={24} />
                 </a>
                 <a
-                  href="#"
+                  href="https://github.com/mt-panda"
                   className="text-white sansation-bold hover:text-black transition-all"
                 >
                   <Github size={24} />
