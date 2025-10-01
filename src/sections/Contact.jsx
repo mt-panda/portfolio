@@ -10,7 +10,6 @@ import {
   CardTitle,
 } from "../components/ui/card.jsx";
 import { Mail, MapPin, Phone, Linkedin, Github, Twitter } from "lucide-react";
-import ElectricBorder from "@/components/ElectricBorder";
 import image from "/images/profile.webp";
 import { SparklesCore } from "@/components/ui/sparkles";
 
