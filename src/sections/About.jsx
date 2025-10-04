@@ -40,7 +40,7 @@ export default function AboutSection() {
 
           {/* Play Button */}
           <button
-            className="about-play-btn top-1/2 md:top-75 left-1/2 md:left-92 transform -translate-x-1/2 md:translate-x-0"
+            className="about-play-btn top-1/2 md:top-70 left-1/2 md:left-85 transform -translate-x-1/2 md:translate-x-0"
             onClick={() => setIsOpen(true)}
           >
             <div className="about-play-btn-inner-container">

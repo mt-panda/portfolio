@@ -43,6 +43,7 @@ export default function ContactSection() {
         isLoading: false,
         autoClose: 2000,
       });
+      e.target.reset();
     }
   };
 
