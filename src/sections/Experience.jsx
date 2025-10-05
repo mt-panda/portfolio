@@ -86,10 +86,10 @@ export default function ExperienceSection() {
         {/* Left column */}
         <div className="w-full md:w-1/2 text-left relative">
           <p
-            className="font-bold text-5xl sm:text-6xl md:text-7xl z-0"
+            className="font-bold text-5xl sm:text-6xl md:text-[100px] z-0"
             style={{
               color: "transparent",
-              WebkitTextStroke: "2px rgba(255, 165, 0, 0.1)",
+              WebkitTextStroke: "2px rgba(255, 255, 255, 0.15)",
               zIndex: 0,
               position: "absolute",
               top: -25,
@@ -105,8 +105,8 @@ export default function ExperienceSection() {
         </div>
 
         {/* Right column */}
-        <div className="w-full md:w-1/2 border-l md:border-l border-t md:border-t-0 border-[#FFA500] text-left pt-4 md:pt-0 md:pl-6">
-          <p className="mt-2 text-gray-300 md:pl-10 text-sm sm:text-base">
+        <div className="w-full md:w-1/2 border-l md:border-l border-t md:border-t-0 border-[#FFA500] text-left pt-4 md:pt-0 md:pl-6 flex items-center">
+          <p className="mt-2 text-gray-300 md:pl-10 text-sm sm:text-base md:text-xl">
             With over 2 years of full-stack journey, I have learned that
             experience is not merely about what you know, but how effectively
             you turn ideas into impact.

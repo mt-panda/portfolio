@@ -67,7 +67,7 @@ export default function AboutSection() {
             className="bg-[#FFA500] hover:bg-[#e69500] hover:opacity-80 transition-opacity duration-300 text-black font-bold px-5 sm:px-6 py-2 sm:py-3 rounded-md cursor-pointer sansation-bold text-sm sm:text-base"
             onClick={() => {
               const link = document.createElement("a");
-              link.href = "/pdfs/Tahir.pdf";
+              link.href = "#";
               link.download = "Tahir.pdf";
               document.body.appendChild(link);
               link.click();
