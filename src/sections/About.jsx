@@ -68,7 +68,7 @@ export default function AboutSection() {
             onClick={() => {
               const link = document.createElement("a");
               link.href = "#";
-              link.download = "Tahir.pdf";
+              // link.download = "Tahir.pdf";
               document.body.appendChild(link);
               link.click();
               document.body.removeChild(link);
