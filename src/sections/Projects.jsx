@@ -85,7 +85,7 @@ export default function CoverflowShowcase() {
   }, []);
 
   return (
-    <section className="relative overflow-hidden bg-gradient text-white py-[180px]">
+    <section id="projects" className="relative overflow-hidden bg-gradient text-white py-[180px]">
       <LightRays
         raysOrigin="top-center"
         raysColor="#FFA500"
