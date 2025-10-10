@@ -12,6 +12,7 @@ import {
 import { Mail, MapPin, Phone, Linkedin, Github, Twitter } from "lucide-react";
 import image from "/images/profile.webp";
 import { SparklesCore } from "@/components/ui/sparkles";
+const access_key = import.meta.env.VITE_EMAIL_ACCESS_KEY;
 
 gsap.registerPlugin(ScrollTrigger, SplitText);
 
@@ -21,7 +22,7 @@ export default function ContactSection() {
     e.preventDefault();
     const formData = new FormData(e.target);
 
-    formData.append("access_key", "c0cdf1f9-afc5-44cd-bfae-7ca4952e1a75");
+    formData.append("access_key", access_key);
 
     const object = Object.fromEntries(formData);
     const json = JSON.stringify(object);
