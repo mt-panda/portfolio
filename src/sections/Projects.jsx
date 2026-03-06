@@ -32,6 +32,8 @@ function styleFor(offset, isMobile) {
   };
 }
 
+// Temp commit to trigger rerun the build on vercel
+
 export default function CoverflowShowcase() {
   const [index, setIndex] = useState(0);
   const [paused, setPaused] = useState(false);
