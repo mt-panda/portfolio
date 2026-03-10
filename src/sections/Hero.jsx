@@ -1,10 +1,24 @@
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
+import { useEffect } from "react";
 
 import Navbar from "./Navbar";
 import HeroSVG from "@/components/ui/HeroSVG";
 
 const Hero = () => {
+  useEffect(() => {
+    // Preload the profile image
+    const link = document.createElement("link");
+    link.rel = "preload";
+    link.as = "image";
+    link.href = "/images/profile.avif";
+    document.head.appendChild(link);
+
+    return () => {
+      document.head.removeChild(link);
+    };
+  }, []);
+
   useGSAP(() => {
     // create a timeline
     const tl = gsap.timeline({
@@ -69,7 +83,17 @@ const Hero = () => {
         <span className="hero-white-gradient"/>
 
         {/* hero image */}
-        <img src="/images/profile.avif" alt="hero-img" className="hero-img" />
+        <img
+          src="/images/profile.avif"
+          alt="hero-img"
+          className="hero-img"
+          fetchPriority="high"
+          decoding="async"
+          loading="eager"
+          sizes="(max-width: 768px) 150px, 300px"
+          width={300}
+          height={300}
+        />
       </div>
     </section>
   );
