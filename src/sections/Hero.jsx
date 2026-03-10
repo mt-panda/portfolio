@@ -58,7 +58,7 @@ const Hero = () => {
   
         {/* hero svg for background */}
         <HeroSVG />
-  
+
         {/* hero headings */}
 
         <div>
@@ -69,7 +69,7 @@ const Hero = () => {
         <span className="hero-white-gradient"/>
 
         {/* hero image */}
-        <img src="/images/profile.png" alt="hero-img" className="hero-img" />
+        <img src="/images/profile.avif" alt="hero-img" className="hero-img" />
       </div>
     </section>
   );
